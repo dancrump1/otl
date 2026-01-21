@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: faq
+instructions: null
+name: FAQ
+searchable: true
+settings:
+  createButtonLabel: 'Add FAQ'
+  entryTypes:
+    - f8deaecd-4403-46fc-b0aa-8c26ad0ac1a7 # FAQ Entry
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

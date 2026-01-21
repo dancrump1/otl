@@ -1,0 +1,9 @@
+baseUrl: $UI_BASE_URL
+enabled: true
+handle: headless
+hasUrls: true
+language: en-US
+name: 'Mono Site'
+primary: true
+siteGroup: 7717bfd3-2305-4e74-88bb-6d8efb50742c # Template
+sortOrder: 1
