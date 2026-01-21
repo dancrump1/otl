@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  87ce2dac-6b44-4930-823a-b4c1b7922253:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-12T13:30:52+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 54da6162-86f6-4a62-a00c-0e5849442b68
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-12T13:32:58+00:00'
+            elementCondition: null
+            fieldUid: e7161c3c-cfab-42e8-8af6-a0558d1a7a02 # Copy
+            handle: body
+            includeInCards: false
+            instructions: null
+            label: Body
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da000e45-c79e-46dd-8103-939f0c951442
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 43cc42c4-722a-427d-a394-ee2c49cf94f3
+        userCondition: null
+handle: adminEntryType
+hasTitleField: true
+icon: book
+name: 'Admin Entry Type'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

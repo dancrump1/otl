@@ -1,0 +1,186 @@
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% set title = (item.id ? "Edit Item"|t('revalidate') : "New Item"|t('revalidate')) %}
+{% set navItems = [
+    {
+        label: 'Revalidate',
+        url: url(plugin.id),
+    }
+] %}
+{% set selectedSubnavItem = 'revalidate' %}
+
+{% block content %}
+    <form method="post" action="" accept-charset="UTF-8">
+        {{ csrfInput() }}
+        <input type="hidden" name="action" value="revalidate/revalidate/save">
+        {% if item.id %}
+            <input type="hidden" name="itemId" value="{{ item.id }}">
+        {% endif %}
+
+        {{ forms.selectField({
+            label: "Type"|t('revalidate'),
+            instructions: "Choose whether to revalidate a section or a direct URI"|t('revalidate'),
+            id: 'type',
+            name: 'type',
+            value: item.type ?: 'section',
+            required: true,
+            options: [
+                { label: 'Section/Channel/Structure/Single', value: 'section' },
+                { label: 'Direct URI', value: 'uri' },
+            ],
+            errors: item.getErrors('type')
+        }) }}
+
+        <div id="content-type-select" style="display: {{ item.type == 'uri' ? 'none' : 'block' }};">
+            {% if availableContentTypes|length %}
+                {% set typeOptions = availableContentTypes|map(ct => {
+                    label: ct.name ~ ' (' ~ ct.handle ~ ')',
+                    value: ct.handle
+                }) %}
+                {% set existingValue = item.type and item.type != 'uri' ? item.contentHandle : '' %}
+                {% set valueInOptions = existingValue in availableContentTypes|map(ct => ct.handle) %}
+                
+                {{ forms.selectField({
+                    label: "Content Type"|t('revalidate'),
+                    instructions: "Select a section, channel, structure, or single to revalidate, or choose 'Manual' to type a handle"|t('revalidate'),
+                    id: 'contentHandleSelect',
+                    name: valueInOptions ? 'contentHandle' : '',
+                    value: valueInOptions ? existingValue : (existingValue ? '__manual__' : ''),
+                    required: true,
+                    options: [{ label: '-- Select --', value: '' }]|merge(typeOptions)|merge([{ label: 'Manual', value: '__manual__' }]),
+                    errors: item.getErrors('contentHandle')
+                }) }}
+                
+                <div id="manual-handle-input" style="display: {{ not valueInOptions and existingValue ? 'block' : 'none' }};">
+                    {{ forms.textField({
+                        label: "Content Handle"|t('revalidate'),
+                        instructions: "Type the handle for the section, channel, structure, or single (e.g., 'contentPages', 'home')"|t('revalidate'),
+                        id: 'contentHandleText',
+                        name: valueInOptions ? '' : 'contentHandle',
+                        value: valueInOptions ? '' : existingValue,
+                        required: true,
+                        errors: item.getErrors('contentHandle')
+                    }) }}
+                </div>
+            {% else %}
+                {{ forms.textField({
+                    label: "Content Handle"|t('revalidate'),
+                    instructions: "Type the handle for the section, channel, structure, or single (e.g., 'contentPages', 'home')"|t('revalidate'),
+                    id: 'contentHandleText',
+                    name: 'contentHandle',
+                    value: item.type and item.type != 'uri' ? item.contentHandle : '',
+                    required: true,
+                    errors: item.getErrors('contentHandle')
+                }) }}
+            {% endif %}
+        </div>
+
+        <div id="uri-input" style="display: {{ item.type == 'uri' ? 'block' : 'none' }};">
+            {{ forms.textField({
+                label: "URI"|t('revalidate'),
+                instructions: "Enter the URI path to revalidate (e.g., 'about', 'blog/post-1', 'sitemap.xml')"|t('revalidate'),
+                id: 'contentHandleUri',
+                name: 'contentHandle',
+                value: item.type == 'uri' ? item.contentHandle : '',
+                required: true,
+                errors: item.getErrors('contentHandle')
+            }) }}
+        </div>
+
+        {{ forms.textareaField({
+            label: "Description"|t('revalidate'),
+            instructions: "Optional description for this revalidation item"|t('revalidate'),
+            id: 'description',
+            name: 'description',
+            value: item.description,
+            rows: 3,
+            errors: item.getErrors('description')
+        }) }}
+
+        <div class="buttons">
+            <input type="submit" class="btn submit" value="{{ 'Save'|t('revalidate') }}">
+            <a href="{{ url(plugin.id) }}" class="btn">{{ 'Cancel'|t('revalidate') }}</a>
+        </div>
+    </form>
+
+    <script>
+        (function() {
+            const typeSelect = document.getElementById('type');
+            const contentTypeSelect = document.getElementById('content-type-select');
+            const uriInput = document.getElementById('uri-input');
+            const contentHandleSelect = document.getElementById('contentHandleSelect');
+            const manualHandleInput = document.getElementById('manual-handle-input');
+            const contentHandleText = document.getElementById('contentHandleText');
+            const contentHandleUri = document.getElementById('contentHandleUri');
+
+            function toggleInputs() {
+                const type = typeSelect.value;
+                if (type === 'uri') {
+                    if (contentTypeSelect) contentTypeSelect.style.display = 'none';
+                    if (uriInput) uriInput.style.display = 'block';
+                    if (contentHandleSelect) contentHandleSelect.disabled = true;
+                    if (manualHandleInput) manualHandleInput.style.display = 'none';
+                    if (contentHandleText) contentHandleText.disabled = true;
+                    if (contentHandleUri) contentHandleUri.disabled = false;
+                } else {
+                    if (contentTypeSelect) contentTypeSelect.style.display = 'block';
+                    if (uriInput) uriInput.style.display = 'none';
+                    if (contentHandleSelect) contentHandleSelect.disabled = false;
+                    if (contentHandleUri) contentHandleUri.disabled = true;
+                    toggleManualInput();
+                }
+            }
+
+            function toggleManualInput() {
+                if (contentHandleSelect && manualHandleInput && contentHandleText) {
+                    const selectedValue = contentHandleSelect.value;
+                    if (selectedValue === '__manual__') {
+                        manualHandleInput.style.display = 'block';
+                        contentHandleText.disabled = false;
+                        contentHandleText.required = true;
+                        contentHandleSelect.name = ''; // Remove name so it's not submitted
+                        contentHandleText.name = 'contentHandle'; // Ensure text field is submitted
+                        // If editing and the value isn't in the dropdown, populate the manual field
+                        if (!contentHandleText.value && contentHandleSelect.dataset.originalValue) {
+                            contentHandleText.value = contentHandleSelect.dataset.originalValue;
+                        }
+                    } else if (selectedValue && selectedValue !== '__manual__') {
+                        manualHandleInput.style.display = 'none';
+                        contentHandleText.disabled = true;
+                        contentHandleText.required = false;
+                        contentHandleSelect.name = 'contentHandle'; // Use select for submission
+                        contentHandleText.name = ''; // Remove name so it's not submitted
+                    } else {
+                        // No selection yet
+                        manualHandleInput.style.display = 'none';
+                        contentHandleText.disabled = true;
+                        contentHandleText.required = false;
+                    }
+                }
+            }
+            
+            // Check if existing value is not in dropdown options (manual entry)
+            if (contentHandleSelect && contentHandleText) {
+                const existingValue = contentHandleSelect.value;
+                const options = Array.from(contentHandleSelect.options).map(opt => opt.value);
+                if (existingValue && !options.includes(existingValue) && existingValue !== '__manual__') {
+                    // Value is not in dropdown, so it was manually entered
+                    contentHandleSelect.value = '__manual__';
+                    contentHandleSelect.dataset.originalValue = existingValue;
+                    toggleManualInput();
+                }
+            }
+
+            // When content handle select changes, show/hide manual input
+            if (contentHandleSelect) {
+                contentHandleSelect.addEventListener('change', toggleManualInput);
+            }
+
+            if (typeSelect) {
+                typeSelect.addEventListener('change', toggleInputs);
+                toggleInputs();
+            }
+        })();
+    </script>
+{% endblock %}

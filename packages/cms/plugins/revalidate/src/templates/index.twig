@@ -1,0 +1,94 @@
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% set title = "Revalidate" %}
+{% set navItems = [
+    {
+        label: 'Revalidate',
+        url: url(plugin.id),
+    }
+] %}
+{% set selectedSubnavItem = 'revalidate' %}
+
+{% block content %}
+    <div class="readable">
+        <div class="toolbar">
+            <a href="{{ url(plugin.id ~ '/new') }}" class="btn submit add icon">{{ "New Item"|t('revalidate') }}</a>
+            <form method="post" action="" style="display: inline-block; margin-left: 10px;">
+                {{ csrfInput() }}
+                <input type="hidden" name="action" value="revalidate/revalidate/revalidate">
+                <button type="submit" class="btn submit">{{ "Revalidate All"|t('revalidate') }}</button>
+            </form>
+        </div>
+
+        {% if items|length %}
+            <table class="data fullwidth">
+                <thead>
+                    <tr>
+                        <th>{{ "Content Handle"|t('revalidate') }}</th>
+                        <th>{{ "Type"|t('revalidate') }}</th>
+                        <th>{{ "Entries"|t('revalidate') }}</th>
+                        <th>{{ "Description"|t('revalidate') }}</th>
+                        <th>{{ "Date Created"|t('revalidate') }}</th>
+                        <th class="thin"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td>
+                                <a href="{{ url(plugin.id ~ '/' ~ item.id) }}">{{ item.contentHandle }}</a>
+                            </td>
+                            <td>
+                                <span class="badge">{{ item.type }}</span>
+                            </td>
+                            <td>
+                                {% if item.type == 'section' and sectionEntries[item.contentHandle] is defined %}
+                                    <span class="badge">{{ sectionEntries[item.contentHandle]|length }} {{ "entries"|t('revalidate') }}</span>
+                                    {% if sectionEntries[item.contentHandle]|length > 0 %}
+                                        <details style="margin-top: 5px;">
+                                            <summary style="cursor: pointer; color: #0d78f2;">{{ "View entries"|t('revalidate') }}</summary>
+                                            <ul style="margin: 5px 0 0 20px; padding: 0;">
+                                                {% for entry in sectionEntries[item.contentHandle] %}
+                                                    <li style="margin: 3px 0;">
+                                                        <code>{{ entry.uri }}</code> - {{ entry.title }}
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </details>
+                                    {% endif %}
+                                {% elseif item.type == 'uri' %}
+                                    <code>{{ item.contentHandle }}</code>
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </td>
+                            <td>{{ item.description ?? '' }}</td>
+                            <td>{{ item.dateCreated|date('Y-m-d H:i') }}</td>
+                            <td>
+                                <div class="btn-group" style="display: flex; gap: 6px">
+                                    <a href="{{ url(plugin.id ~ '/' ~ item.id) }}" class="btn icon edit" title="{{ 'Edit'|t('revalidate') }}"></a>
+                                    <form method="post" action="" style="display: inline-block;">
+                                        {{ csrfInput() }}
+                                        <input type="hidden" name="action" value="revalidate/revalidate/revalidate">
+                                        <input type="hidden" name="itemId" value="{{ item.id }}">
+                                        <button type="submit" class="btn icon" title="{{ 'Revalidate'|t('revalidate') }}">↻</button>
+                                    </form>
+                                    <form method="post" action="" style="display: inline-block;">
+                                        {{ csrfInput() }}
+                                        <input type="hidden" name="action" value="revalidate/revalidate/delete">
+                                        <input type="hidden" name="itemId" value="{{ item.id }}">
+                                        <button type="submit" class="btn icon delete" title="{{ 'Delete'|t('revalidate') }}"></button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>{{ "No items yet. Sections will be auto-added when available."|t('revalidate') }}</p>
+        {% endif %}
+    </div>
+{% endblock %}
+

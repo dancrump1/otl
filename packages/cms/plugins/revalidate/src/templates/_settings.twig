@@ -1,0 +1,20 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: "UI Base URL"|t('revalidate'),
+    instructions: "The base URL of your Next.js frontend (e.g., https://example.com). Leave empty to use UI_BASE_URL environment variable."|t('revalidate'),
+    id: 'uiBaseUrl',
+    name: 'uiBaseUrl',
+    value: settings.uiBaseUrl,
+    errors: settings.getErrors('uiBaseUrl')
+}) }}
+
+{{ forms.textField({
+    label: "Revalidation Secret"|t('revalidate'),
+    instructions: "The secret token for revalidation. Leave empty to use REVALIDATION_SECRET environment variable."|t('revalidate'),
+    id: 'revalidationSecret',
+    name: 'revalidationSecret',
+    value: settings.revalidationSecret,
+    type: 'password',
+    errors: settings.getErrors('revalidationSecret')
+}) }}

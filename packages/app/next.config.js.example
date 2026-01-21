@@ -1,0 +1,92 @@
+import withPlaiceholder from "@plaiceholder/next";
+
+// TODO STARTUP: Make this a real file
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	// Create build in temp directory so site can continue until after build process
+	distDir: process.env.BUILD_DIR || ".next",
+// Allows use of items from other npm workspace package
+	transpilePackages: ["shared"],
+
+	// If importing an svg as React component (eg: import Oogity from '/public/oogity.svg')
+	// Fixes value being object and not string or func/class
+	webpack(config) {
+		config.module.rules.push({
+			test: /\.svg$/,
+			use: ["@svgr/webpack"],
+		});
+
+		return config;
+	},
+
+	// Dangerously allow production builds to successfully complete even if your project has type errors.
+	// eslint: {
+	// 	ignoreDuringBuilds: true,
+	// },
+
+	// Dangerously allow production builds to successfully complete even if your project has type errors.
+	// typescript: {
+	// 	ignoreBuildErrors: true,
+	// },
+
+	// Where we permit images from being fetched from
+	images: {
+		remotePatterns: [
+			// TODO Startup: Remove this in production
+			{
+				protocol: "https",
+				hostname: "cms.ddev.site",
+				port: "",
+				pathname: "/publicFiles/**",
+			},
+		],
+	},
+
+	// Use backend generated Sitemap and Robots
+	async rewrites() {
+		return [
+			{
+				source: "/sitemap.xml",
+				destination: `${process.env.NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_ENDPOINT}/sitemap.xml`,
+			},
+			{
+				source: "/sitemap:path.xml",
+				destination: `${process.env.NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_ENDPOINT}/sitemap:path.xml`,
+			},
+			{
+				source: "/robots.txt",
+				destination: `${process.env.NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_ENDPOINT}/robots.txt`,
+			},
+		];
+	},
+
+	// URL redirects
+	async redirects() {
+		return [
+			// EXAMPLE REDIRECTS
+			// Basic redirect
+			// {
+			// 	source: "/about",
+			// 	destination: "/",
+			// 	permanent: true,
+			// },
+			// Wildcard path matching
+			// {
+			// 	source: "/blog/:slug",
+			// 	destination: "/news/:slug",
+			// 	permanent: false,
+			// },
+			// TODO STARTUP: Add redirect to /admin
+			{
+				source: "/admin",
+				destination: "https://cms.ddev.site.com/admin/login",
+				permanent: true,
+			},
+		];
+	},
+};
+
+// "Plaiceholder" is a suite of server-side functions for creating low quality image placeholders (LQIP).
+
+export default withPlaiceholder(nextConfig);
+// export default nextConfig;

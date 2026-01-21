@@ -1,0 +1,16 @@
+.env
+settings.json
+.vscode
+storage
+*.sql
+*.log
+node_modules/
+/vendor
+/web/cpresources
+/web/assets
+/web/publicFiles
+/web/.htaccess
+/web/dist
+
+.ddev/config.yaml
+.ddev/.env.web

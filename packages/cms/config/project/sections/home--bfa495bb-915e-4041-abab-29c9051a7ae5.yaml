@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 40a1c1d0-31e4-42f2-ad25-99bea864c2c8 # Home
+handle: home
+maxAuthors: 1
+name: Home
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '/api/preview?entryUid={canonicalUid}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  9edae570-63e2-4382-9220-af482b3a8ea0: # Mono Site
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: __home__
+type: single

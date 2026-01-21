@@ -1,0 +1,38 @@
+{
+    "name": "revalidate/revalidate",
+    "description": "Craft CMS plugin for managing Next.js revalidation",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "plugin",
+        "revalidate"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "homepage": "https://yourwebsite.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^5.0.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "revalidate\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Revalidate",
+        "handle": "revalidate",
+        "developer": "Your Name",
+        "developerUrl": "https://yourwebsite.com",
+        "documentationUrl": "https://github.com/yourusername/revalidate",
+        "changelogUrl": "https://raw.githubusercontent.com/yourusername/revalidate/master/CHANGELOG.md",
+        "class": "revalidate\\Revalidate"
+    }
+}
