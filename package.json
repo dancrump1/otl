@@ -1,0 +1,22 @@
+{
+  "name": "headless-website",
+  "workspaces": [
+    "packages/app",
+    "packages/cms",
+    "packages/shared"
+  ],
+  "scripts": {
+    "build": "npm --workspace app run build",
+    "app": "npm --workspace cms run start && npm --workspace app run build && npm --workspace app run start",
+    "app-dev": "npm --workspace cms run start && npm --workspace app run dev",
+    "cms": "npm --workspace cms run start",
+    "install:custom": "npm install && (cd packages/cms && ddev start && ddev exec composer install)",
+    "dev:cms": "cd packages/cms && ddev start",
+    "dev:app": "npm run dev --workspace packages/app",
+    "dev:apps": "concurrently -k -n APP -c green \"npm run dev:app\"",
+    "dev": "npm run dev:cms && npm run dev:apps"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

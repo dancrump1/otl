@@ -1,0 +1,22 @@
+headingLevels:
+  - 2
+  - 3
+  - 4
+js: "return {\r\n\r\n\t\tlink: {\r\n\t\t\taddTargetToExternalLinks: true\r\n\t\t}\r\n\r\n}"
+name: Simple
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - underline
+  - superscript
+  - subscript
+  - link
+  - bulletedList
+  - numberedList
+  - outdent
+  - indent
+  - horizontalLine
+  - findAndReplace
+  - sourceEditing

@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: embedUrl
+instructions: 'Enter the webcam or other url to display within an iFrame'
+name: 'Embed URL'
+searchable: false
+settings:
+  maxLength: 255
+  typeSettings:
+    __assoc__:
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

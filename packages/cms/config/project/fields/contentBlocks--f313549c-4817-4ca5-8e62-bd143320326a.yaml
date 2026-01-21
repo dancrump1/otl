@@ -1,0 +1,27 @@
+columnSuffix: null
+handle: contentBlocks
+instructions: 'Add Copy block to have About section'
+name: 'Content Blocks'
+searchable: true
+settings:
+  createButtonLabel: 'Add Block'
+  defaultIndexViewMode: cards
+  entryTypes:
+    - 4e88ca21-9b2d-4ce9-98a5-d87592d2af3b # Copy Block
+    - 6e14be77-74c8-4e91-afb6-4c98e85e7fcf # Call to Action
+    - ad6b6777-9454-47f6-9d4b-d12ecf9719c2 # Image Block
+    - 313ffcf0-e7f5-4df0-8746-52caed50ee1f
+    - d269d509-ec58-4102-b030-123735ec49c6
+    - 8a0a92e6-c591-41be-94f7-b9486c5cc954 # Articles Block
+    - 1eca0178-8adb-40e9-a795-b7647be86ab6 # Embed Code
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: true
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

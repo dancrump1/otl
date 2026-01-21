@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  4b298fe6-101d-476d-8776-8cb2b61f7a21:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-08T15:34:41+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Question
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 89b4c6a4-204a-488a-9fd0-2c8781390a54
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-08T15:37:26+00:00'
+            elementCondition: null
+            fieldUid: e7161c3c-cfab-42e8-8af6-a0558d1a7a02 # Copy
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Answer
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 76c26903-7373-4736-8480-ac3128034c84
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 90590df2-2f46-4105-970d-5dae15999f0d
+        userCondition: null
+handle: faqEntry
+hasTitleField: true
+icon: circle-question
+name: 'FAQ Entry'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: ''
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: ''
+titleTranslationMethod: site

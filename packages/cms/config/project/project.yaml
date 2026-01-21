@@ -1,0 +1,301 @@
+dateModified: 1748973858
+elementSources:
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'volume:ce985485-f319-4eaf-ad85-a67a23083a7b' # Images
+      tableAttributes:
+        - filename
+        - alt
+        - size
+        - imageSize
+        - dateModified
+        - uploader
+        - link
+        - usage
+      type: native
+    -
+      key: 'volume:6ddafe28-7e96-4bb7-bf31-25db29ddc352' # Documents
+      type: native
+    -
+      key: temp
+      type: native
+  craft\elements\Entry:
+    -
+      heading: Singles
+      type: heading
+    -
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'single:bfa495bb-915e-4041-abab-29c9051a7ae5' # Home
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      key: 'single:f8f3bf62-bfc0-4380-a4f0-30d5fc687f6b'
+      type: native
+    -
+      key: 'single:c429a232-e807-4c5c-9762-4de37ef003c8'
+      type: native
+    -
+      key: 'single:35031632-7fae-468a-86b9-39f1ee305996'
+      type: native
+    -
+      key: 'single:b5e0c83b-991f-4cc4-8b49-797adbd69efb'
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:d7a06f05-30db-4e6f-aa07-5cf7f54ed82f' # Content Pages
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      key: 'section:62011668-218c-456d-b076-914aff259c8a'
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      key: 'section:5a7dc087-eef8-45db-970a-1d8049f9d7bc' # Admin Guide
+      type: native
+email:
+  fromEmail: sysadmin@drivebrandstudio.com
+  fromName: Template
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  publicFiles:
+    hasUrls: true
+    name: 'Public Files'
+    settings:
+      path: publicFiles
+    type: craft\fs\Local
+    url: $ASSETS_BASE_URL
+meta:
+  __names__:
+    1c5282b3-5be0-41d8-b71b-d881c9cbbe89: 'Admin Entry Type' # Admin Entry Type
+    1eca0178-8adb-40e9-a795-b7647be86ab6: 'Embed Code' # Embed Code
+    4e88ca21-9b2d-4ce9-98a5-d87592d2af3b: 'Copy Block' # Copy Block
+    5a7dc087-eef8-45db-970a-1d8049f9d7bc: 'Admin Guide' # Admin Guide
+    5a313bb8-30df-4d3c-9108-cbc12983eedb: Subhead # Subhead
+    6ddafe28-7e96-4bb7-bf31-25db29ddc352: Documents # Documents
+    6df82477-f72c-4502-9139-ca94a455e8a1: 'Public Schema' # Public Schema
+    6e14be77-74c8-4e91-afb6-4c98e85e7fcf: 'Call to Action' # Call to Action
+    8a0a92e6-c591-41be-94f7-b9486c5cc954: 'Articles Block' # Articles Block
+    8a26d716-9934-4cab-8aca-91bda6ee6ab7: 'Embed URL' # Embed URL
+    9edae570-63e2-4382-9220-af482b3a8ea0: 'Mono Site' # Mono Site
+    40a1c1d0-31e4-42f2-ad25-99bea864c2c8: Home # Home
+    062f852a-a67b-4f65-aead-ab532527b58a: Hero # Hero
+    91bb68e0-8acd-47f4-aa50-8bdf87280701: 'Raw HTML' # Raw HTML
+    355f30e4-aa97-4dc1-bd5e-9eb628988ef5: 'Button Text' # Button Text
+    360d6d5a-3e88-44e1-99d9-0dba8cd5a8a9: Address # Address
+    602b9327-37d5-439c-8154-280fe0f5b3f1: Number # Number
+    731d7ec8-217b-4e30-ba76-1ef10aa6b730: Partner_250 # Partner_250
+    3745dd6e-061b-45b7-90c7-442d0f6f5a42: 'Content Pages' # Content Pages
+    7717bfd3-2305-4e74-88bb-6d8efb50742c: Template # Template
+    73864aa9-33fc-4c8e-b156-35948e9f98d0: Private # Private
+    1412130d-56fe-4352-8d91-598b04aee7af: 'Title Number' # Title Number
+    a1ea9dce-08e7-405b-a77d-ec625d8534d2: 'CTA Blocks' # CTA Blocks
+    a729f261-6b41-424c-9461-849b691ee23a: 'Social Media' # Social Media
+    a947ea7f-e48b-412e-84d0-f993a76cbcb1: Email # Email
+    ad6b6777-9454-47f6-9d4b-d12ecf9719c2: 'Image Block' # Image Block
+    bfa495bb-915e-4041-abab-29c9051a7ae5: Home # Home
+    c8acf698-19ef-4ce8-86e1-809c9570aa7c: Logo # Logo
+    c9cffc4a-2bfa-483d-809f-8dbc5bd9b56c: 'Blog Tags' # Blog Tags
+    c55ca0a9-4bd6-409b-afd8-c1884dafecd0: Team # Team
+    c5945a7c-e66f-42b3-b613-59a81282be36: Image # Image
+    ca6f615a-1a62-4884-9b85-9f533de44708: 'Title Value' # Title Value
+    cc3defbc-0d81-4e42-9b3c-8af6137b5348: Button # Button
+    ccaf1af6-6ad2-4458-ab7d-a40e192d9a59: Footer # Footer
+    cd6f59ae-75ab-4a65-ac22-bc9a12595aef: Phone # Phone
+    ce985485-f319-4eaf-ad85-a67a23083a7b: Images # Images
+    d7a06f05-30db-4e6f-aa07-5cf7f54ed82f: 'Content Pages' # Content Pages
+    df97141f-2aa8-499e-91c6-9437240f4508: Header # Header
+    e85c9eb1-a196-4658-88ec-5702444c8fe5: Contact # Contact
+    e867fb38-3c9f-4190-81dc-b6cb8d8f9827: Simple # Simple
+    e7161c3c-cfab-42e8-8af6-a0558d1a7a02: Copy # Copy
+    e8074911-d311-4d2b-8e31-b8818a8a9342: Square_400 # Square_400
+    eb634245-2ffd-4995-9efd-6f2b6bb750df: SEO # SEO
+    f8deaecd-4403-46fc-b0aa-8c26ad0ac1a7: 'FAQ Entry' # FAQ Entry
+    f22c0733-8ca9-49c3-a2d0-af18ffcb5d63: FAQ # FAQ
+    f313549c-4817-4ca5-8e62-bd143320326a: 'Content Blocks' # Content Blocks
+plugins:
+  assetusage:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      cacheDuration: 300
+      disableVimeoTracking: false
+      enableAutoRefresh: true
+      facebookKey: ''
+      googleKey: null
+      maxAssetNameLength: 50
+      maxFileNameLength: 50
+      parameters:
+        -
+          __assoc__:
+            -
+              - param
+              - maxwidth
+            -
+              - value
+              - '1920'
+        -
+          __assoc__:
+            -
+              - param
+              - maxheight
+            -
+              - value
+              - '1080'
+      preventNonWhitelistedUploads: false
+      referer: $PRIMARY_SITE_URL
+      showThumbnailsInCp: true
+      useYouTubeNoCookie: false
+      whitelist:
+        - 'amazon.*'
+        - 'amazon.co.*'
+        - amcharts.com
+        - baidu.com
+        - bsky.app
+        - bsky.social
+        - collegehumor.com
+        - dailymotion.com
+        - deviantart.com
+        - embed.ly
+        - 'facebook.*'
+        - 'facebook.co.*'
+        - 'facebook.com.*'
+        - fb.com
+        - 'google.*'
+        - 'google.co.*'
+        - 'google.com.*'
+        - hulu.com
+        - iframely.com
+        - imgur.com
+        - instagr.am
+        - instagram.com
+        - kickstarter.com
+        - live.com
+        - meetup.com
+        - meetupstatic.com
+        - netflix.com
+        - openstreetmap.org
+        - pbs.org
+        - nhpbs.org
+        - reddit.com
+        - sharepoint.com
+        - soundcloud.com
+        - tiktok.com
+        - t.co
+        - 'twitter.*'
+        - 'twitter.co.*'
+        - 'twitter.com.*'
+        - twimg.com
+        - vimeo.com
+        - vine.co
+        - wikipedia.org
+        - wikimedia.org
+        - wistia.com
+        - wistia.net
+        - wordpress.com
+        - yahoo.com
+        - youtu.be
+        - youtube.com
+        - youtube-nocookie.com
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  hyper:
+    edition: standard
+    enabled: true
+    licenseKey: 8UH42HSBIYA58TF4C95QYEX9
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: 1H0MPM9EV3GD1DX2PXAMHWR8
+    schemaVersion: 2.1.0
+  phone-number:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+  usermanual:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.0.0
+    settings:
+      enabledSideBar: true
+      pluginNameOverride: 'Admin Guide'
+      section: 15
+      templateOverride: null
+system:
+  edition: solo
+  live: true
+  name: 'DBS Template'
+  retryDuration: null
+  schemaVersion: 5.7.0.3
+  timeZone: America/New_York

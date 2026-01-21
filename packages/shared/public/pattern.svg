@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="208" height="16" viewBox="0 0 208 16" fill="none">
+  <path d="M200 8L136 8" stroke="#213545"/>
+  <rect x="136" y="1" width="9.89946" height="9.89946" transform="rotate(45 136 1)" fill="#D5B98C" stroke="#213545"/>
+  <rect x="200" y="1" width="9.89946" height="9.89946" transform="rotate(45 200 1)" fill="#D5B98C" stroke="#213545"/>
+  <rect x="168" y="1" width="9.89946" height="9.89946" transform="rotate(45 168 1)" fill="#D5B98C" stroke="#213545"/>
+  <path d="M136 8L72 8" stroke="#213545"/>
+  <rect x="72" y="1" width="9.89946" height="9.89946" transform="rotate(45 72 1)" fill="#D5B98C" stroke="#213545"/>
+  <rect x="136" y="1" width="9.89946" height="9.89946" transform="rotate(45 136 1)" fill="#D5B98C" stroke="#213545"/>
+  <rect x="104" y="1" width="9.89946" height="9.89946" transform="rotate(45 104 1)" fill="#D5B98C" stroke="#213545"/>
+  <path d="M72 8L8 8" stroke="#213545"/>
+  <rect x="8" y="1" width="9.89946" height="9.89946" transform="rotate(45 8 1)" fill="#D5B98C" stroke="#213545"/>
+  <rect x="72" y="1" width="9.89946" height="9.89946" transform="rotate(45 72 1)" fill="#D5B98C" stroke="#213545"/>
+  <rect x="40" y="1" width="9.89946" height="9.89946" transform="rotate(45 40 1)" fill="#D5B98C" stroke="#213545"/>
+</svg>

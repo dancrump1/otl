@@ -1,0 +1,56 @@
+columnSuffix: null
+handle: titleNumber
+instructions: null
+name: 'Title Number'
+searchable: true
+settings:
+  addRowLabel: 'Add a row'
+  columns:
+    __assoc__:
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Title
+            -
+              - handle
+              - title
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Number
+            -
+              - handle
+              - number
+            -
+              - width
+              - ''
+            -
+              - type
+              - number
+  defaults:
+    -
+      __assoc__:
+        -
+          - col2
+          - ''
+        -
+          - col1
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table
