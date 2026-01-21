@@ -1,0 +1,115 @@
+color: null
+fieldLayouts:
+  eb6e2a6c-3aed-4944-8e85-9bd109f365ad:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-09-18T18:57:36+00:00'
+            elementCondition: null
+            fieldUid: c5945a7c-e66f-42b3-b613-59a81282be36 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2a534601-a363-4258-a015-b866ef1b8ddf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-09T18:44:10+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Headline
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8da9525b-0008-45f5-bf4b-9c6377cdc79b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-18T18:59:53+00:00'
+            elementCondition: null
+            fieldUid: 5a313bb8-30df-4d3c-9108-cbc12983eedb # Subhead
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d171fa55-9c60-4afc-8243-910409f93fa9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-09T18:44:10+00:00'
+            elementCondition: null
+            fieldUid: e7161c3c-cfab-42e8-8af6-a0558d1a7a02 # Copy
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6cf8d50-e096-40c6-b015-f7bbb2733e1d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-09T18:44:10+00:00'
+            elementCondition: null
+            fieldUid: cc3defbc-0d81-4e42-9b3c-8af6137b5348 # Button
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7684b09a-b0f9-4b1c-bb48-9260812c3085
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1219ad2d-4803-46e2-86d8-017f0fd5a324
+        userCondition: null
+handle: callToAction
+hasTitleField: true
+icon: alarm-clock
+name: 'Call to Action'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

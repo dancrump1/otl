@@ -1,0 +1,58 @@
+import withPlaiceholder from "@plaiceholder/next";
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	// Create build in temp directory so site can continue until after build process
+	distDir: process.env.BUILD_DIR || '.next',
+
+	// !! WARN !!
+	// Dangerously allow production builds to successfully complete even if
+	// your project has type errors.
+	// !! WARN !!
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	// !! WARN !!
+	// Dangerously allow production builds to successfully complete even if
+	// your project has type errors.
+	// !! WARN !!
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+
+	// Where we permit images from being fetched from
+	images: {
+		remotePatterns: [
+			// TODO Startup: Remove this in production
+			{
+				protocol: "https",
+				hostname: "craft.ddev.site",
+				port: "",
+				pathname: "/publicFiles/**",
+			},
+		],
+	},
+
+	// URL redirects
+	async redirects() {
+		return [
+			// EXAMPLE REDIRECTS
+			// Basic redirect
+			// {
+			// 	source: "/about",
+			// 	destination: "/",
+			// 	permanent: true,
+			// },
+			// Wildcard path matching
+			// {
+			// 	source: "/blog/:slug",
+			// 	destination: "/news/:slug",
+			// 	permanent: false,
+			// },
+		];
+	},
+};
+
+// "Plaiceholder" is a suite of server-side functions for creating low quality image placeholders (LQIP). 
+
+export default withPlaiceholder(nextConfig);

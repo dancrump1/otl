@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  95ac437c-b235-4948-a0ec-0f81adcf9245:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-09-18T19:34:14+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 45a92c87-9772-493b-93a5-6ea15c6224a4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-18T19:35:31+00:00'
+            elementCondition: null
+            fieldUid: 129ac02f-cebb-4b35-bbc0-a334523615c0
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 334e1989-17fc-48cb-be16-bdbbe3e248ae
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1d1d05da-9a2c-4872-94da-503b5992f299
+        userCondition: null
+handle: operatingHours
+hasTitleField: true
+icon: clock
+name: 'Operating Hours'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

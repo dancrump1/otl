@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  - 1c5282b3-5be0-41d8-b71b-d881c9cbbe89 # Admin Entry Type
+handle: adminGuide
+maxAuthors: 1
+name: 'Admin Guide'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  9edae570-63e2-4382-9220-af482b3a8ea0: # Template
+    enabledByDefault: true
+    hasUrls: true
+    template: admin-guide/_entry.twig
+    uriFormat: 'admin-guide/{slug}'
+structure:
+  maxLevels: null
+  uid: 8de6009c-ecc0-4e9c-9530-565baa616577
+type: structure

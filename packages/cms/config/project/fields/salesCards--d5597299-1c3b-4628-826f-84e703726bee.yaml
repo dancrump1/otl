@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: salesCards
+instructions: null
+name: 'Service Cards'
+searchable: true
+settings:
+  createButtonLabel: 'Add Card'
+  defaultIndexViewMode: cards
+  entryTypes:
+    - 313ffcf0-e7f5-4df0-8746-52caed50ee1f
+  includeTableView: false
+  maxEntries: 4
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: true
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

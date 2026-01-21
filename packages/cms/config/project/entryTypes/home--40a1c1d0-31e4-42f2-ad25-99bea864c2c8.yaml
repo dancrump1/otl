@@ -1,0 +1,169 @@
+color: red
+fieldLayouts:
+  bf10ff55-53bc-4cda-8569-7df94bd94679:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-13T16:52:14+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6969a42f-f570-4963-bb9a-38e3f451548d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-17T19:23:20+00:00'
+            elementCondition: null
+            fieldUid: 062f852a-a67b-4f65-aead-ab532527b58a # Hero
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fdab8c6e-80f6-450f-a45d-f93ba77b93f6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-17T19:23:20+00:00'
+            elementCondition: null
+            fieldUid: 4bb7eb67-f8d4-4559-8344-b83d1e685294
+            handle: headline
+            includeInCards: false
+            instructions: '20 character max'
+            label: Headline
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1b2ea7e2-2cda-4ed7-9f6b-967904141141
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-06T00:51:53+00:00'
+            elementCondition: null
+            fieldUid: f313549c-4817-4ca5-8e62-bd143320326a # Content Blocks
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79454bd4-2ff9-472e-bc7a-b68b4308d0c4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-22T15:06:56+00:00'
+            elementCondition: null
+            fieldUid: d5597299-1c3b-4628-826f-84e703726bee # Service Cards
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f99c09df-bbca-47a4-a4cf-6d9cee23fa06
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-22T15:36:53+00:00'
+            elementCondition: null
+            fieldUid: a1ea9dce-08e7-405b-a77d-ec625d8534d2 # CTA Blocks
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2bd1dbab-1f27-4e57-893b-6dd6a78a501e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-23T16:44:06+00:00'
+            elementCondition: null
+            fieldUid: c5945a7c-e66f-42b3-b613-59a81282be36 # Image
+            handle: null
+            includeInCards: false
+            instructions: 'Enter 1 photo'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b696503d-c9e7-4c08-a576-31b7fff8546f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3838450c-2cc3-44b8-a883-0e959af9da46
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-09-26T19:37:21+00:00'
+            elementCondition: null
+            fieldUid: eb634245-2ffd-4995-9efd-6f2b6bb750df # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d009e05-6869-427b-a94d-7bede8e848b5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: b1dd5642-7de2-4738-af0f-5c4bb3dedb2c
+        userCondition: null
+handle: home
+hasTitleField: true
+icon: house
+name: Home
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

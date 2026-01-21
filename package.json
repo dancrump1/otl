@@ -1,0 +1,13 @@
+{
+  "name": "headless-website",
+  "workspaces": [
+    "packages/app",
+    "packages/cms"
+  ],
+  "scripts": {
+    "build": "npm --workspace app run build",
+    "app": "npm --workspace cms run start && npm --workspace app run build && npm --workspace app run start",
+    "app-dev": "npm --workspace cms run start && npm --workspace app run dev",
+    "cms": "npm --workspace cms run start"
+  }
+}

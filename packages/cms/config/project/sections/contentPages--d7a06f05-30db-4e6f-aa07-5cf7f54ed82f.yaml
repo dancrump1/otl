@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 3745dd6e-061b-45b7-90c7-442d0f6f5a42 # Content Pages
+handle: contentPages
+maxAuthors: 1
+name: 'Content Pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '/api/preview?entryUid={canonicalUid}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  9edae570-63e2-4382-9220-af482b3a8ea0: # Template
+    enabledByDefault: true
+    hasUrls: true
+    template: content-pages/_entry
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: ed37df7c-1f2b-485c-9d04-853e9fc10b65
+type: structure

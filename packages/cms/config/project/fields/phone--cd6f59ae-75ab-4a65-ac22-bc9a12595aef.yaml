@@ -1,0 +1,11 @@
+columnSuffix: null
+handle: phone
+instructions: null
+name: Phone
+searchable: true
+settings:
+  defaultRegion: US
+  previewFormat: national
+translationKeyFormat: null
+translationMethod: none
+type: rynpsc\phonenumber\fields\PhoneNumberField

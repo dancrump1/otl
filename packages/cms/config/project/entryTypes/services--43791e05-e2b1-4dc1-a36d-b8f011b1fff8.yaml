@@ -1,0 +1,99 @@
+color: null
+fieldLayouts:
+  8582ca20-bdfe-4c49-b3a8-589473db51d3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-08T20:13:58+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3b00d87e-eaaa-4333-8052-9622a9fdae0a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-08T20:16:57+00:00'
+            elementCondition: null
+            fieldUid: e7161c3c-cfab-42e8-8af6-a0558d1a7a02 # Copy
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f050f782-5666-4c54-868d-4d3020567937
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-08T20:16:57+00:00'
+            elementCondition: null
+            fieldUid: 254fb94f-fe5b-4ac2-b927-cf2e2c6d3f3f
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a423ba97-bf89-436e-8729-2850c3192b2c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-08T20:16:57+00:00'
+            elementCondition: null
+            fieldUid: 4bb7eb67-f8d4-4559-8344-b83d1e685294
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Disclaimer
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 99a06c93-341c-4603-9015-fb63c49c129b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 30e07827-1105-4b5e-99ea-867e9e9f6bed
+        userCondition: null
+handle: services
+hasTitleField: true
+icon: ski-boot-ski
+name: Services
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: ''
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: ''
+titleTranslationMethod: site

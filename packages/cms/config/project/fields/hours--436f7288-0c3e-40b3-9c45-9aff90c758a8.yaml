@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: hours
+instructions: null
+name: Hours
+searchable: true
+settings:
+  createButtonLabel: 'Add Hours'
+  entryTypes:
+    - 73084ec7-444f-4888-a090-78ca2f66e536 # Operating Hours
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
