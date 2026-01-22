@@ -16,14 +16,14 @@ export function Hero() {
         </h1>
         
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 text-pretty">
-          A show for casual gamers, by casual games. Scott and Jason, your hosts, are unqualified to talk about gaming.
+          Welcome to Outside The Lobby - A show for casual gamers, by casual gamers. Each week, we dive into one video game that everyone's talking about, or no one's talking about, but whatever the case may be, is worth knowing about, no matter your skill level.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             size="lg" 
             className="gap-2 text-base px-8"
-            onClick={() => window.open("https://open.spotify.com", "_blank")}
+            onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
           >
             <Headphones className="w-5 h-5" />
             Listen on Spotify

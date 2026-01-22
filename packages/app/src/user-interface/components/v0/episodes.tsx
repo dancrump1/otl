@@ -1,44 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { Play, Clock, Calendar } from "lucide-react";
 import { Button } from "../basic/button";
-
-const episodes = [
-  {
-    number: "EP 47",
-    title: "Is This The Best Open World Game Ever?",
-    description: "We finally played that one everyone's been hyping up. Spoiler: we have opinions.",
-    duration: "1h 23m",
-    date: "Jan 15, 2026",
-    featured: true,
-  },
-  {
-    number: "EP 46",
-    title: "The State of Multiplayer in 2026",
-    description: "Are we cooked? Maybe. Let's talk about it.",
-    duration: "58m",
-    date: "Jan 1, 2026",
-    featured: false,
-  },
-  {
-    number: "EP 45",
-    title: "Games We Can't Wait to Play This Year",
-    description: "Our personal hype lists. Some bangers, some sleepers, all vibes.",
-    duration: "1h 12m",
-    date: "Dec 18, 2025",
-    featured: false,
-  },
-  {
-    number: "EP 44",
-    title: "GOTY 2025: The Final Debate",
-    description: "We argued for two hours. Nobody changed their mind. Classic.",
-    duration: "2h 05m",
-    date: "Dec 4, 2025",
-    featured: false,
-  },
-];
+import { allEpisodes } from "./episodes-data";
 
 export function Episodes() {
+  // Show only the 5 most recent episodes on the home page
+  const recentEpisodes = allEpisodes.slice(0, 5);
   return (
     <section id="episodes" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -51,13 +20,16 @@ export function Episodes() {
               What We&apos;ve Been Playing
             </h2>
           </div>
-          <Button variant="link" className="text-primary p-0 h-auto self-start md:self-auto">
-            All episodes on Spotify
-          </Button>
+          <Link 
+            href="/episodes"
+            className="text-primary hover:underline font-medium text-sm self-start md:self-auto"
+          >
+            View All Episodes →
+          </Link>
         </div>
 
         <div className="grid gap-4">
-          {episodes.map((episode) => (
+          {recentEpisodes.map((episode) => (
             <article
               key={episode.number}
               className={`group relative border border-border rounded-lg p-6 transition-all hover:border-primary/50 hover:bg-card ${
@@ -69,6 +41,7 @@ export function Episodes() {
                 <button 
                   className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shrink-0 transition-transform group-hover:scale-105"
                   aria-label={`Play ${episode.title}`}
+                  onClick={() => window.open(episode.spotifyUrl || "https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
                 >
                   <Play className="w-6 h-6 ml-1" fill="currentColor" />
                 </button>
@@ -95,10 +68,12 @@ export function Episodes() {
 
                 {/* Meta info */}
                 <div className="flex items-center gap-4 text-muted-foreground text-sm shrink-0">
-                  <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4" />
-                    {episode.duration}
-                  </span>
+                  {episode.duration && (
+                    <span className="flex items-center gap-1.5">
+                      <Clock className="w-4 h-4" />
+                      {episode.duration}
+                    </span>
+                  )}
                   <span className="hidden sm:flex items-center gap-1.5">
                     <Calendar className="w-4 h-4" />
                     {episode.date}

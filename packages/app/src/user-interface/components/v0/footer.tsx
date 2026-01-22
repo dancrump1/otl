@@ -13,11 +13,11 @@ export function Footer() {
               Outside The Lobby
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Just two friends talking games. New episodes every couple weeks.
+              A show for casual gamers, by casual gamers. Hosted by Jason Sebo and Scott Kalish.
             </p>
             <div className="flex gap-4">
               <button
-                onClick={() => window.open("https://open.spotify.com", "_blank")}
+                onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Listen on Spotify"
               >
@@ -59,7 +59,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => window.open("https://open.spotify.com", "_blank")}
+                  onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
                   className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                 >
                   Spotify
@@ -85,14 +85,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Outside The Lobby. All rights reserved.
-          </p>
-          <p className="text-muted-foreground text-sm">
-            New episodes every couple weeks
-          </p>
-        </div>
+        
       </div>
     </footer>
   );
