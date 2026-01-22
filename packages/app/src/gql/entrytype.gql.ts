@@ -25,6 +25,7 @@ export const homePageQuery = gql`
     ... on home_Entry {
       id
       url
+      title
       hero {
         ${imagesQuery}
       }
@@ -34,6 +35,7 @@ export const homePageQuery = gql`
         ${imageBlockQuery}
         ${callToActionQuery}
       }
+      ${seoQuery}
     }
   }
 }

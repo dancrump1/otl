@@ -3,7 +3,7 @@ enabled: true
 handle: headless
 hasUrls: true
 language: en-US
-name: 'Mono Site'
+name: 'Outside The Lobby'
 primary: true
-siteGroup: 7717bfd3-2305-4e74-88bb-6d8efb50742c # Template
+siteGroup: d7d355dc-2681-427c-a713-3f895c7ca1c4 # OTL
 sortOrder: 1

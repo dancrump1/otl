@@ -1,44 +1,24 @@
 isPublic: false
 name: Private
 scope:
-  - 'sites.9edae570-63e2-4382-9220-af482b3a8ea0:read' # Mono Site
+  - 'sites.9edae570-63e2-4382-9220-af482b3a8ea0:read' # Outside The Lobby
   - 'elements.drafts:read'
   - 'elements.revisions:read'
   - 'elements.inactive:read'
-  - 'sections.f8f3bf62-bfc0-4380-a4f0-30d5fc687f6b:read'
-  - 'sections.c429a232-e807-4c5c-9762-4de37ef003c8:read'
   - 'sections.bfa495bb-915e-4041-abab-29c9051a7ae5:read' # Home
-  - 'sections.35031632-7fae-468a-86b9-39f1ee305996:read'
-  - 'sections.b5e0c83b-991f-4cc4-8b49-797adbd69efb:read'
   - 'sections.5a7dc087-eef8-45db-970a-1d8049f9d7bc:read' # Admin Guide
-  - 'sections.62011668-218c-456d-b076-914aff259c8a:read'
   - 'sections.d7a06f05-30db-4e6f-aa07-5cf7f54ed82f:read' # Content Pages
   - 'nestedentryfields.e7161c3c-cfab-42e8-8af6-a0558d1a7a02:read' # Copy
-  - 'nestedentryfields.80238cb1-38ee-42f9-9e9a-9e2424f34c58:read'
   - 'nestedentryfields.f313549c-4817-4ca5-8e62-bd143320326a:read' # Content Blocks
   - 'nestedentryfields.a1ea9dce-08e7-405b-a77d-ec625d8534d2:read' # CTA Blocks
   - 'nestedentryfields.f22c0733-8ca9-49c3-a2d0-af18ffcb5d63:read' # FAQ
-  - 'nestedentryfields.81909199-d148-46fe-abae-413210a06bb9:read'
-  - 'nestedentryfields.26436e8e-6281-4f26-96fa-8764e1e6c10f:read'
-  - 'nestedentryfields.436f7288-0c3e-40b3-9c45-9aff90c758a8:read'
-  - 'nestedentryfields.8b747985-ff6d-42e6-aaef-2182e8f04b66:read'
-  - 'nestedentryfields.5b6f3c28-607b-4abc-a12a-fdd8be031a2f:read'
-  - 'nestedentryfields.d5597299-1c3b-4628-826f-84e703726bee:read'
-  - 'nestedentryfields.8e9e6815-702b-4b32-afc5-4b50cb176d73:read'
-  - 'nestedentryfields.a911c606-82a4-4c22-a4f9-f0b71b13839d:read'
-  - 'nestedentryfields.70302f20-711d-4e8b-b5b7-986ec620e1be:read'
-  - 'nestedentryfields.bc8740dd-54f1-4637-b8eb-4840a93f5eab:read'
   - 'volumes.ce985485-f319-4eaf-ad85-a67a23083a7b:read' # Images
   - 'volumes.6ddafe28-7e96-4bb7-bf31-25db29ddc352:read' # Documents
-  - 'globalsets.dfc952ab-02c1-4dda-9610-10da96cfa37b:read'
   - 'globalsets.e85c9eb1-a196-4658-88ec-5702444c8fe5:read' # Contact
   - 'globalsets.df97141f-2aa8-499e-91c6-9437240f4508:read' # Header
   - 'globalsets.ccaf1af6-6ad2-4458-ab7d-a40e192d9a59:read' # Footer
   - 'globalsets.a729f261-6b41-424c-9461-849b691ee23a:read' # Social Media
-  - 'categorygroups.ce21434f-bafb-4808-867f-17d28791bce6:read'
   - 'taggroups.c9cffc4a-2bfa-483d-809f-8dbc5bd9b56c:read' # Blog Tags
-  - 'Calendars.all:read'
-  - 'Calendars.e8f1c95a-b621-42e3-af71-c85068272e54:read'
   - 'navigationNavs.all:read'
-  - 'navigationNavs.d1cb8e7f-16cc-4912-acd7-70f9707ae330:read'
-  - 'navigationNavs.5c5e3eeb-4505-4262-8812-b307069ffdc7:read'
+  - 'navigationNavs.16ccd7b0-a942-4f02-9d0b-d09a23b37f12:read' # Header
+  - 'navigationNavs.63d18cba-28fe-42ee-a761-c302a4b0ea09:read' # Footer

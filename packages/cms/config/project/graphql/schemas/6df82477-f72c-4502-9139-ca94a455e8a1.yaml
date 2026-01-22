@@ -1,7 +1,7 @@
 isPublic: true
 name: 'Public Schema'
 scope:
-  - 'sites.9edae570-63e2-4382-9220-af482b3a8ea0:read' # Mono Site
+  - 'sites.9edae570-63e2-4382-9220-af482b3a8ea0:read' # Outside The Lobby
   - 'elements.drafts:read'
   - 'elements.revisions:read'
   - 'elements.inactive:read'

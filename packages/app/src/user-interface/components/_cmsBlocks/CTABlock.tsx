@@ -1,70 +1,58 @@
 import React from "react";
 
-import Image from "next/image";
-
 import { cn } from "@/user-interface/client-utils/cn";
-import { v4 as uuidv4 } from "uuid";
 
+import ImageComponent from "../ImageComponent";
 import Action from "./Action";
 import { CopyText } from "./CopyBlock";
 
 const CTABlock = ({ block, order }: { block: any; order: number }) => {
 	return (
-		<div
-			className={cn(
-				"flex-col justify-between flex py-16 xl:py-40",
-				block.background ? "bg-backgroundSecondary text-white" : ""
-			)}
-			key={uuidv4()}
-		>
+		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div
 				className={cn(
-					"mx-[10%] flex flex-col gap-6 lg:gap-36",
+					"flex flex-col gap-8 lg:gap-12",
 					`${!!(order % 2) ? "lg:flex-row-reverse" : "lg:flex-row"}`
 				)}
 			>
-				<div className="lg:hidden">
-					{block.title && <h2 className="">{block.title}</h2>}
-					{block.subhead && <h3 className="">{block.subhead}</h3>}
-				</div>
 				{!!block.images && !!block.images.length && (
 					<div className="lg:basis-1/2">
-						<Image
-							src={block.images[0].url}
-							alt={block.images[0]?.alt || block.images[0].title}
-							width={block.images[0].width || ""}
-							height={block.images[0].height || ""}
-							className="w-full cta-img-sm max-h-[75vh] object-cover"
-							style={
-								block.images[0].focalPoint
-									? {
-											objectPosition: `${
-												block.images[0].focalPoint[0] * 100
-											}% ${block.images[0].focalPoint[1] * 100}%`,
-									  }
-									: {}
-							}
-						/>
+						<div className="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
+							<ImageComponent
+								image={block.images[0]}
+								className="object-cover"
+								width={block.images[0].width || 800}
+								height={block.images[0].height || 600}
+							/>
+						</div>
 					</div>
 				)}
 
-				<div className="flex flex-col lg:basis-1/2">
+				<div className="flex flex-col justify-center lg:basis-1/2 space-y-6">
 					{block.title && (
-						<h2 className="hidden lg:block mb-6">{block.title}</h2>
+						<h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">
+							{block.title}
+						</h2>
 					)}
 					{block.subhead && (
-						<h3 className="hidden lg:block mb-6">{block.subhead}</h3>
+						<h3 className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-300 font-medium">
+							{block.subhead}
+						</h3>
 					)}
 					{block.copy && (
-						<CopyText className="text-balance">{block.copy}</CopyText>
+						<div className="prose prose-lg dark:prose-invert max-w-none">
+							<CopyText className="text-zinc-700 dark:text-zinc-300">
+								{block.copy}
+							</CopyText>
+						</div>
 					)}
 					{!!block.button?.length && (
-						<Action
-							button={block.button[0]}
-							className={`mx-auto mt-2 lg:ml-0 button ${
-								block.background ? "red-to-white" : "red-to-black"
-							}`}
-						/>
+						<div className="pt-2">
+							<Action
+								button={block.button[0]}
+								className="inline-flex items-center justify-center rounded-lg bg-zinc-900 dark:bg-white px-6 py-3 text-sm font-semibold text-white dark:text-zinc-900 shadow-sm hover:bg-zinc-800 dark:hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:focus-visible:outline-white transition-colors"
+							/>
+						</div>
 					)}
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-dateModified: 1764017643
+dateModified: 1769049248
 elementSources:
   craft\elements\Asset:
     -
@@ -26,7 +26,22 @@ elementSources:
       type: native
   craft\elements\Entry:
     -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
       heading: Singles
+      key: 'heading:e0732ebe-d6aa-4944-aba8-fc7c0100e520'
       type: heading
     -
       defaultSort:
@@ -39,20 +54,7 @@ elementSources:
         - status
         - postDate
         - expiryDate
-        - authors
         - link
-      type: native
-    -
-      key: 'single:f8f3bf62-bfc0-4380-a4f0-30d5fc687f6b'
-      type: native
-    -
-      key: 'single:c429a232-e807-4c5c-9762-4de37ef003c8'
-      type: native
-    -
-      key: 'single:35031632-7fae-468a-86b9-39f1ee305996'
-      type: native
-    -
-      key: 'single:b5e0c83b-991f-4cc4-8b49-797adbd69efb'
       type: native
     -
       defaultSort:
@@ -68,27 +70,12 @@ elementSources:
       type: native
     -
       heading: Channels
+      key: 'heading:7b3fd928-f9e7-4743-86b0-85418c9d29d3'
       type: heading
-    -
-      key: 'section:62011668-218c-456d-b076-914aff259c8a'
-      type: native
     -
       heading: ''
+      key: 'heading:41d79465-ca64-485c-8b6e-97ec1e134186'
       type: heading
-    -
-      defaultSort:
-        - postDate
-        - desc
-      disabled: false
-      key: '*'
-      tableAttributes:
-        - status
-        - section
-        - postDate
-        - expiryDate
-        - authors
-        - link
-      type: native
     -
       key: 'section:5a7dc087-eef8-45db-970a-1d8049f9d7bc' # Admin Guide
       type: native
@@ -120,7 +107,7 @@ meta:
     6e14be77-74c8-4e91-afb6-4c98e85e7fcf: 'Call to Action' # Call to Action
     8a0a92e6-c591-41be-94f7-b9486c5cc954: 'Articles Block' # Articles Block
     8a26d716-9934-4cab-8aca-91bda6ee6ab7: 'Embed URL' # Embed URL
-    9edae570-63e2-4382-9220-af482b3a8ea0: 'Mono Site' # Mono Site
+    9edae570-63e2-4382-9220-af482b3a8ea0: 'Outside The Lobby' # Outside The Lobby
     16ccd7b0-a942-4f02-9d0b-d09a23b37f12: Header # Header
     40a1c1d0-31e4-42f2-ad25-99bea864c2c8: Home # Home
     062f852a-a67b-4f65-aead-ab532527b58a: Hero # Hero
@@ -131,7 +118,6 @@ meta:
     602b9327-37d5-439c-8154-280fe0f5b3f1: Number # Number
     731d7ec8-217b-4e30-ba76-1ef10aa6b730: Partner_250 # Partner_250
     3745dd6e-061b-45b7-90c7-442d0f6f5a42: 'Content Pages' # Content Pages
-    7717bfd3-2305-4e74-88bb-6d8efb50742c: Template # Template
     73864aa9-33fc-4c8e-b156-35948e9f98d0: Private # Private
     1412130d-56fe-4352-8d91-598b04aee7af: 'Title Number' # Title Number
     a1ea9dce-08e7-405b-a77d-ec625d8534d2: 'CTA Blocks' # CTA Blocks
@@ -149,6 +135,7 @@ meta:
     cd6f59ae-75ab-4a65-ac22-bc9a12595aef: Phone # Phone
     ce985485-f319-4eaf-ad85-a67a23083a7b: Images # Images
     d7a06f05-30db-4e6f-aa07-5cf7f54ed82f: 'Content Pages' # Content Pages
+    d7d355dc-2681-427c-a713-3f895c7ca1c4: OTL # OTL
     df97141f-2aa8-499e-91c6-9437240f4508: Header # Header
     e85c9eb1-a196-4658-88ec-5702444c8fe5: Contact # Contact
     e867fb38-3c9f-4190-81dc-b6cb8d8f9827: Simple # Simple
@@ -297,7 +284,7 @@ plugins:
 system:
   edition: solo
   live: true
-  name: 'DBS Template'
+  name: 'Outside The Lobby'
   retryDuration: null
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: America/New_York

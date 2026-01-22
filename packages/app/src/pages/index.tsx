@@ -23,8 +23,8 @@ export interface IPageProps {
 	[k: string]: any;
 }
 
-function Index(props: { data: HomePageTypes }): JSX.Element {
-	return <Home data={props.data} />;
+function Index(props: { data: { entry: HomePageTypes } }): JSX.Element {
+	return <Home data={props.data.entry} />;
 }
 
 Index.getLayout = function getLayout(page: any) {
@@ -45,13 +45,13 @@ export const getStaticProps: GetStaticProps = async ({
 			? previewData
 			: (previewData as { token?: string })?.token
 	);
-	const data: HomePageTypes = await client.request(homePageQuery);
+	const queryResult: { entry: HomePageTypes } = await client.request(homePageQuery);
 
 	const nav: NavInterface = await client.request(NavQuery);
 	const header = await client.request(headerQuery);
 	const footer = await client.request(footerQuery);
 
-	const updatedData = await updateAllImages(data, await updateImage);
+	const updatedData = await updateAllImages(queryResult, await updateImage);
 
 	return {
 		props: {
