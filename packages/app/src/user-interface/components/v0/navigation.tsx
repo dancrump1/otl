@@ -7,7 +7,7 @@ import { Button } from "../basic/button";
 
 const navLinks = [
   { label: "Episodes", href: "/episodes", external: false },
-  { label: "Discord", href: "https://discord.com", external: true },
+  { label: "Discord", href: "https://discord.gg/RhJcXdMAxa", external: true },
 ];
 
 export function Navigation() {

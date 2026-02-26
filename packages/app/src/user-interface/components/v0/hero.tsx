@@ -32,7 +32,7 @@ export function Hero() {
             size="lg" 
             variant="outline" 
             className="gap-2 text-white px-8 bg-transparent"
-            onClick={() => window.open("https://discord.com", "_blank")}
+            onClick={() => window.open("https://discord.gg/RhJcXdMAxa", "_blank")}
           >
             <MessageCircle className="w-5 h-5" />
             Join the Discord

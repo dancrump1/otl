@@ -16,20 +16,22 @@ export function Footer() {
               A show for casual gamers, by casual gamers. Hosted by Jason Sebo and Scott Kalish.
             </p>
             <div className="flex gap-4">
-              <button
-                onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
-                className="text-muted-foreground hover:text-primary transition-colors"
+              <a
+              href="https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn?si=d47a1f0c9cd54662"
+              target="_blank"
+              className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Listen on Spotify"
               >
                 <Headphones className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => window.open("https://discord.com", "_blank")}
+              </a>
+              <a
+                href={"https://discord.gg/RhJcXdMAxa"}
+                target="_blank"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Join Discord"
               >
                 <MessageCircle className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
 
