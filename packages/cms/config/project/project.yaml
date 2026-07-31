@@ -1,4 +1,4 @@
-dateModified: 1769049248
+dateModified: 1785463777
 elementSources:
   craft\elements\Asset:
     -
@@ -110,6 +110,15 @@ meta:
     9edae570-63e2-4382-9220-af482b3a8ea0: 'Outside The Lobby' # Outside The Lobby
     16ccd7b0-a942-4f02-9d0b-d09a23b37f12: Header # Header
     40a1c1d0-31e4-42f2-ad25-99bea864c2c8: Home # Home
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a1: 'Boxies Year' # Boxies Year
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a2: 'Boxies Title' # Boxies Title
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a3: 'Boxies Intro' # Boxies Intro
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a4: 'Boxies Place' # Boxies Place
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a5: 'Jason Quote' # Jason Quote
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a6: 'Scott Quote' # Scott Quote
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a7: 'Box Art' # Box Art
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a8: 'Boxies Awards' # Boxies Awards
+    7f3a2c10-5b91-4e82-a6d3-1c948f0e21a9: 'Box Art Award' # Box Art Award
     062f852a-a67b-4f65-aead-ab532527b58a: Hero # Hero
     63d18cba-28fe-42ee-a761-c302a4b0ea09: Footer # Footer
     91bb68e0-8acd-47f4-aa50-8bdf87280701: 'Raw HTML' # Raw HTML
@@ -259,6 +268,10 @@ plugins:
     enabled: true
     licenseKey: 8UH42HSBIYA58TF4C95QYEX9
     schemaVersion: 1.0.0
+  mcp:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   navigation:
     edition: standard
     enabled: true
@@ -286,5 +299,5 @@ system:
   live: true
   name: 'Outside The Lobby'
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.10.0.0
   timeZone: America/New_York

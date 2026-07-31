@@ -9,10 +9,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 88250a3d-1689-491d-a14b-a2c9aeefcbbd
             handle: socialLinks
-            includeInCards: false
             instructions: null
             label: 'Social Links'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

@@ -18,6 +18,7 @@ import {
 } from "@/user-interface/client-utils/getPlaiceholder";
 import Home from "@/user-interface/layouts/Home";
 import Layout from "@/user-interface/layouts/Layout";
+import { mapCmsBoxiesToEdition } from "@/user-interface/components/v0/boxies-data";
 
 // TODO: Add interface for home page props
 export interface IPageProps {
@@ -28,7 +29,9 @@ function Index(props: {
 	data: { entry: HomePageTypes };
 	episodes: Awaited<ReturnType<typeof getSpotifyEpisodes>>;
 }): JSX.Element {
-	return <Home episodes={props.episodes} />;
+	const boxies = mapCmsBoxiesToEdition(props.data.entry);
+
+	return <Home episodes={props.episodes} boxies={boxies} />;
 }
 
 Index.getLayout = function getLayout(page: any) {

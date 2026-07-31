@@ -46,7 +46,11 @@ export const getStaticProps: GetStaticProps = async ({
 	const pageString =
 		typeof params?.page === "string" ? params?.page : params?.page?.[0];
 
-	const page = pageString?.replace("/", "");
+	if (!pageString || pageString.includes(".")) {
+		return { notFound: true };
+	}
+
+	const page = pageString.replace("/", "");
 
 	const query =
 		pageQueries[page as keyof typeof pageQueries] || pageQueries.contentPage;
@@ -85,8 +89,14 @@ export const getStaticProps: GetStaticProps = async ({
 export const getStaticPaths: GetStaticPaths = async () => {
 	const client = cmsClient();
 
-	// TODO STARTUP: Ensure this captures all generic pages
-	const { contentPagesEntries } = await client.request(pageQueries.pages);
+	let contentPagesEntries: AllContentPages[] = [];
+
+	try {
+		const result = await client.request(pageQueries.pages);
+		contentPagesEntries = result.contentPagesEntries ?? [];
+	} catch {
+		contentPagesEntries = [];
+	}
 
 	const paths = contentPagesEntries
 		.map((entry: AllContentPages) =>
@@ -94,16 +104,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 				? entry.uri?.split("/")?.[1] || ""
 				: entry.uri || ""
 		)
-		.filter((item: string) => !!item || item.includes("home"));
+		.filter((item: string) => !!item && item !== "home");
 
 	return {
-		paths: paths.map((page: { params: { page: string } }) => {
-			return {
-				params: {
-					page,
-				},
-			};
-		}),
+		paths: paths.map((page: string) => ({
+			params: { page },
+		})),
 		fallback: "blocking",
 	};
 };

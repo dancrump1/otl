@@ -22,3 +22,5 @@ scope:
   - 'navigationNavs.all:read'
   - 'navigationNavs.16ccd7b0-a942-4f02-9d0b-d09a23b37f12:read' # Header
   - 'navigationNavs.63d18cba-28fe-42ee-a761-c302a4b0ea09:read' # Footer
+  - 'directive:parseRefs'
+  - 'directive:transform'

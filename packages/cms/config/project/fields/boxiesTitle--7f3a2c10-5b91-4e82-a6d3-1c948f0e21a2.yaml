@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: boxiesTitle
+instructions: 'Main heading for the Boxies section.'
+name: 'Boxies Title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 1
+  multiline: false
+  placeholder: 'The 2025 OTL Boxies'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

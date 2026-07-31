@@ -18,6 +18,7 @@ scope:
   - 'nestedentryfields.f313549c-4817-4ca5-8e62-bd143320326a:read' # Content Blocks
   - 'nestedentryfields.a1ea9dce-08e7-405b-a77d-ec625d8534d2:read' # CTA Blocks
   - 'nestedentryfields.f22c0733-8ca9-49c3-a2d0-af18ffcb5d63:read' # FAQ
+  - 'nestedentryfields.7f3a2c10-5b91-4e82-a6d3-1c948f0e21a8:read' # Boxies Awards
   - 'nestedentryfields.81909199-d148-46fe-abae-413210a06bb9:read'
   - 'nestedentryfields.26436e8e-6281-4f26-96fa-8764e1e6c10f:read'
   - 'nestedentryfields.436f7288-0c3e-40b3-9c45-9aff90c758a8:read'
@@ -44,3 +45,5 @@ scope:
   - 'navigationNavs.all:read'
   - 'navigationNavs.d1cb8e7f-16cc-4912-acd7-70f9707ae330:read'
   - 'navigationNavs.5c5e3eeb-4505-4262-8812-b307069ffdc7:read'
+  - 'directive:parseRefs'
+  - 'directive:transform'

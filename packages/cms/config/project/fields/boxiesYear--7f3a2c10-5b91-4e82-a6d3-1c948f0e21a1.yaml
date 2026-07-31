@@ -1,0 +1,18 @@
+columnSuffix: null
+handle: boxiesYear
+instructions: 'Award year shown in the Boxies section (e.g. 2025).'
+name: 'Boxies Year'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: 2000
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

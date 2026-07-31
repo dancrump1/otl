@@ -14,7 +14,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: Question
@@ -23,7 +22,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -40,10 +38,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: e7161c3c-cfab-42e8-8af6-a0558d1a7a02 # Copy
             handle: null
-            includeInCards: false
             instructions: null
             label: Answer
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

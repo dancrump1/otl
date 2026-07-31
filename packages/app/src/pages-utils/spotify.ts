@@ -29,8 +29,6 @@ async function getAccessToken(): Promise<string | null> {
 	const clientId = process.env.SPOTIFY_CLIENT_ID;
 	const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 
-	console.log("clientId", clientId);
-	console.log("clientSecret", clientSecret);
 	if (!clientId || !clientSecret) {
 		console.warn(
 			"Spotify credentials not configured. Set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET.",
@@ -38,7 +36,6 @@ async function getAccessToken(): Promise<string | null> {
 		return null;
 	}
 
-	console.log("cachedToken", cachedToken);
 	if (cachedToken && Date.now() < cachedToken.expiresAt) {
 		return cachedToken.token;
 	}
@@ -56,14 +53,12 @@ async function getAccessToken(): Promise<string | null> {
 		body: "grant_type=client_credentials",
 	});
 
-	console.log("response", response);
 	if (!response.ok) {
 		console.error("Failed to fetch Spotify access token:", response.statusText);
 		return null;
 	}
 
 	const data: SpotifyTokenResponse = await response.json();
-	console.log("data", data);
 	cachedToken = {
 		token: data.access_token,
 		expiresAt: Date.now() + (data.expires_in - 60) * 1000,

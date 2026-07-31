@@ -146,3 +146,4 @@ permissions:
   - 'viewpeerentrydrafts:f5afed83-1639-4cf0-ad48-cac24523aafe'
   - 'viewpeerentrydrafts:feb4039c-7470-44d4-a6b5-34276a00ef15'
   - viewusers
+  - 'changeauthorforpeerentries:d7a06f05-30db-4e6f-aa07-5cf7f54ed82f' # Content Pages

@@ -14,7 +14,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -23,7 +22,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -41,10 +39,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 062f852a-a67b-4f65-aead-ab532527b58a # Hero
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -58,10 +54,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: f313549c-4817-4ca5-8e62-bd143320326a # Content Blocks
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -75,10 +69,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a1ea9dce-08e7-405b-a77d-ec625d8534d2 # CTA Blocks
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -92,10 +84,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: c5945a7c-e66f-42b3-b613-59a81282be36 # Image
             handle: null
-            includeInCards: false
             instructions: 'Enter 1 photo'
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -110,15 +100,79 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-07-31T02:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21a1 # Boxies Year
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21c1
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2026-07-31T02:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21a2 # Boxies Title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21c2
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            dateAdded: '2026-07-31T02:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21a3 # Boxies Intro
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21c3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-31T02:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21a8 # Boxies Awards
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21c4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Boxies
+        uid: 7f3a2c10-5b91-4e82-a6d3-1c948f0e21c5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2024-09-26T19:37:21+00:00'
             editCondition: null
             elementCondition: null
             fieldUid: eb634245-2ffd-4995-9efd-6f2b6bb750df # SEO
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

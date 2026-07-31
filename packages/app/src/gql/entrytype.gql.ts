@@ -1,6 +1,6 @@
 import { gql } from "graphql-request";
 
-import { callToActionQuery, ContentBlocksTypes, copyBlockQuery, embedCodeQuery, EtherSeoData, FaqEntry, faqQuery, imageBlockQuery, ImagesAsset, imagesQuery, seoQuery } from "./fields.gql";
+import { callToActionQuery, ContentBlocksTypes, copyBlockQuery, embedCodeQuery, EtherSeoData, FaqEntry, faqQuery, imageBlockQuery, ImagesAsset, imagesQuery, seoQuery, boxiesQuery, BoxiesFields } from "./fields.gql";
 
 export interface BaseEntryTypeTypes {
   id: string;
@@ -16,6 +16,10 @@ export interface BaseEntryTypeTypes {
 export interface HomePageTypes extends BaseEntryTypeTypes {
   ctaBlocks?: any;
   images?: any;
+  boxiesYear?: number;
+  boxiesTitle?: string;
+  boxiesIntro?: string;
+  boxiesAwards?: BoxiesFields["boxiesAwards"];
 }
 
 // TODO STARTUP: Replace this
@@ -35,6 +39,7 @@ export const homePageQuery = gql`
         ${imageBlockQuery}
         ${callToActionQuery}
       }
+      ${boxiesQuery}
       ${seoQuery}
     }
   }

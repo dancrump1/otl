@@ -9,10 +9,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 360d6d5a-3e88-44e1-99d9-0dba8cd5a8a9 # Address
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -25,10 +23,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: cd6f59ae-75ab-4a65-ac22-bc9a12595aef # Phone
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -41,10 +37,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a947ea7f-e48b-412e-84d0-f993a76cbcb1 # Email
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

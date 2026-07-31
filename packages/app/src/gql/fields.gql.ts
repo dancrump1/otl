@@ -237,6 +237,38 @@ export const seoQuery = `
   }
 `;
 
+export interface BoxArtAwardEntry {
+  title: string;
+  boxiesPlace: number;
+  jasonQuote: string;
+  scottQuote: string;
+  boxArt: ImagesAsset[];
+}
+
+export interface BoxiesFields {
+  boxiesYear: number;
+  boxiesTitle: string;
+  boxiesIntro?: string;
+  boxiesAwards: BoxArtAwardEntry[];
+}
+
+export const boxiesQuery = `
+  boxiesYear
+  boxiesTitle
+  boxiesIntro
+  boxiesAwards {
+    ... on boxArtAward_Entry {
+      title
+      boxiesPlace
+      jasonQuote
+      scottQuote
+      boxArt {
+        ${imagesQuery}
+      }
+    }
+  }
+`;
+
 export interface ArticlesBlockTypes extends BaseContentBlock {
 	typeHandle: "articlesBlock";
 }

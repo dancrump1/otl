@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: boxiesAwards
+instructions: 'Add exactly three box art awards for 1st, 2nd, and 3rd place.'
+name: 'Boxies Awards'
+searchable: true
+settings:
+  createButtonLabel: 'Add award'
+  entryTypes:
+    - 7f3a2c10-5b91-4e82-a6d3-1c948f0e21a9 # Box Art Award
+  includeTableView: false
+  maxEntries: 3
+  minEntries: 3
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: true
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

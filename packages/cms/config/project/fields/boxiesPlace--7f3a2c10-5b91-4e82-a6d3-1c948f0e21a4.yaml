@@ -1,0 +1,18 @@
+columnSuffix: null
+handle: boxiesPlace
+instructions: 'Podium placement: 1, 2, or 3.'
+name: 'Boxies Place'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: 3
+  min: 1
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number
