@@ -2,6 +2,7 @@
 
 import { Headphones, MessageCircle } from "lucide-react";
 import { Button } from "../basic/button";
+import { SPOTIFY_SHOW_URL } from "@/pages-utils/spotifyConstants";
 
 export function Hero() {
   return (
@@ -23,7 +24,7 @@ export function Hero() {
           <Button 
             size="lg" 
             className="gap-2 text-base px-8"
-            onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
+            onClick={() => window.open(SPOTIFY_SHOW_URL, "_blank")}
           >
             <Headphones className="w-5 h-5" />
             Listen on Spotify

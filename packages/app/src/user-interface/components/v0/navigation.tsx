@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Headphones } from "lucide-react";
 import { Button } from "../basic/button";
+import { SPOTIFY_SHOW_URL } from "@/pages-utils/spotifyConstants";
 
 const navLinks = [
   { label: "Episodes", href: "/episodes", external: false },
@@ -49,7 +50,7 @@ export function Navigation() {
           <Button 
             size="sm" 
             className="gap-2"
-            onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
+            onClick={() => window.open(SPOTIFY_SHOW_URL, "_blank")}
           >
             <Headphones className="w-4 h-4" />
             Listen Now
@@ -96,7 +97,7 @@ export function Navigation() {
             <Button 
               size="sm" 
               className="gap-2 w-full"
-              onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
+              onClick={() => window.open(SPOTIFY_SHOW_URL, "_blank")}
             >
               <Headphones className="w-4 h-4" />
               Listen Now

@@ -1,6 +1,7 @@
 "use client";
 
 import { Headphones, MessageCircle } from "lucide-react";
+import { SPOTIFY_SHOW_URL } from "@/pages-utils/spotifyConstants";
 
 export function Footer() {
   return (
@@ -17,7 +18,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-              href="https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn?si=d47a1f0c9cd54662"
+              href={SPOTIFY_SHOW_URL}
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Listen on Spotify"
@@ -61,7 +62,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => window.open("https://open.spotify.com/show/6ziWU8CjbHpD425wI6yDJn", "_blank")}
+                  onClick={() => window.open(SPOTIFY_SHOW_URL, "_blank")}
                   className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                 >
                   Spotify

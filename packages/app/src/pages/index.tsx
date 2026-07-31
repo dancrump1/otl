@@ -10,6 +10,7 @@ import {
 	NavQuery,
 } from "@/gql/globals.gql";
 import cmsClient from "@/pages-utils/cmsClient";
+import { getSpotifyEpisodes } from "@/pages-utils/spotify";
 import {
 	resolveAllPromisesDeep,
 	updateAllImages,
@@ -23,8 +24,11 @@ export interface IPageProps {
 	[k: string]: any;
 }
 
-function Index(props: { data: { entry: HomePageTypes } }): JSX.Element {
-	return <Home data={props.data.entry} />;
+function Index(props: {
+	data: { entry: HomePageTypes };
+	episodes: Awaited<ReturnType<typeof getSpotifyEpisodes>>;
+}): JSX.Element {
+	return <Home episodes={props.episodes} />;
 }
 
 Index.getLayout = function getLayout(page: any) {
@@ -52,10 +56,12 @@ export const getStaticProps: GetStaticProps = async ({
 	const footer = await client.request(footerQuery);
 
 	const updatedData = await updateAllImages(queryResult, await updateImage);
+	const episodes = await getSpotifyEpisodes();
 
 	return {
 		props: {
 			data: await resolveAllPromisesDeep(updatedData),
+			episodes,
 			nav,
 			header,
 			footer,
