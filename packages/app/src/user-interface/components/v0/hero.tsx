@@ -1,51 +1,70 @@
 "use client";
 
-import { Headphones, MessageCircle } from "lucide-react";
-import { Button } from "../basic/button";
-import { SPOTIFY_SHOW_URL } from "@/pages-utils/spotifyConstants";
+import dynamic from "next/dynamic";
+
+import type { Level } from "@/user-interface/components/effects/brick-breaker";
+
+const BrickBreaker = dynamic(
+	() =>
+		import("@/user-interface/components/effects/brick-breaker").then(
+			(mod) => mod.BrickBreaker,
+		),
+	{ ssr: false },
+);
+
+const N = { type: "normal" as const };
+
+const HERO_LEVELS: Level[] = [
+	{
+		id: 1,
+		name: "The Lobby",
+		bricks: Array.from({ length: 12 }, () =>
+			Array.from({ length: 12 }, () => N),
+		),
+	},
+];
+
+const HERO_GAME_CONFIG = {
+	colors: {
+		background: "transparent",
+		paddle: "hsl(40 95% 55%)",
+		ball: "hsl(40 95% 55%)",
+		ballTrail: "hsl(40 95% 55% / 0.4)",
+		text: "hsl(0 0% 98%)",
+		textMuted: "hsl(220 10% 60%)",
+		bricks: {
+			normal: "hsl(40 95% 55% / 0.55)",
+			strong: "hsl(215 80% 55% / 0.65)",
+			metal: "hsl(0 0% 98% / 0.4)",
+			indestructible: "hsl(220 10% 60% / 0.3)",
+		},
+	},
+	layout: {
+		topPadding: 0.12,
+		sidePadding: 0.06,
+		brickFieldFit: "contain" as const,
+		brickFieldAspect: 2503 / 2526,
+		brickGap: 3,
+		brickBorderRadius: 4,
+	},
+	storage: {
+		persistHighScore: true,
+		storageKey: "otl-brick-breaker",
+	},
+};
 
 export function Hero() {
-  return (
-    <section className="relative min-h-[90vh] flex items-center justify-center">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <p className="text-primary font-medium tracking-wide uppercase text-sm mb-6">
-          A Video Game Podcast
-        </p>
-        
-        <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground mb-6 text-balance">
-          Outside The Lobby
-        </h1>
-        
-        <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 text-pretty">
-          Welcome to Outside The Lobby - A show for casual gamers, by casual gamers. Each week, we dive into one video game that everyone's talking about, or no one's talking about, but whatever the case may be, is worth knowing about, no matter your skill level.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            size="lg" 
-            className="gap-2 text-base px-8"
-            onClick={() => window.open(SPOTIFY_SHOW_URL, "_blank")}
-          >
-            <Headphones className="w-5 h-5" />
-            Listen on Spotify
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="gap-2 text-white px-8 bg-transparent"
-            onClick={() => window.open("https://discord.gg/RhJcXdMAxa", "_blank")}
-          >
-            <MessageCircle className="w-5 h-5" />
-            Join the Discord
-          </Button>
-        </div>
-        
-        <p className="text-muted-foreground text-sm mt-8">
-          New episodes every 2 weeks (they said and then lied again and again...)
-          <br/>
-          Also Kat Naps! They're not episodes... but they are....
-        </p>
-      </div>
-    </section>
-  );
+	return (
+		<section className="relative min-h-[90vh] overflow-hidden pt-16">
+			<h1 className="sr-only">Outside The Lobby</h1>
+			<BrickBreaker
+				className="absolute inset-0 h-full w-full cursor-crosshair"
+				autoFocus={false}
+				showFocusRing={false}
+				config={HERO_GAME_CONFIG}
+				levels={HERO_LEVELS}
+				imageSrc="/OTL-logo.jpeg"
+			/>
+		</section>
+	);
 }

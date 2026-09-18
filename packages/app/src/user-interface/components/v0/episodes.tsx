@@ -12,7 +12,7 @@ export function Episodes({ episodes }: EpisodesProps) {
   const recentEpisodes = episodes.slice(0, 5);
 
   return (
-    <section id="episodes" className="py-24 px-6">
+    <section id="episodes" className="px-6 py-32 md:py-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>

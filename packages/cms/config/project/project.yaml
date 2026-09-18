@@ -1,4 +1,4 @@
-dateModified: 1785463777
+dateModified: 1789753194
 elementSources:
   craft\elements\Asset:
     -
@@ -105,11 +105,6 @@ meta:
     6ddafe28-7e96-4bb7-bf31-25db29ddc352: Documents # Documents
     6df82477-f72c-4502-9139-ca94a455e8a1: 'Public Schema' # Public Schema
     6e14be77-74c8-4e91-afb6-4c98e85e7fcf: 'Call to Action' # Call to Action
-    8a0a92e6-c591-41be-94f7-b9486c5cc954: 'Articles Block' # Articles Block
-    8a26d716-9934-4cab-8aca-91bda6ee6ab7: 'Embed URL' # Embed URL
-    9edae570-63e2-4382-9220-af482b3a8ea0: 'Outside The Lobby' # Outside The Lobby
-    16ccd7b0-a942-4f02-9d0b-d09a23b37f12: Header # Header
-    40a1c1d0-31e4-42f2-ad25-99bea864c2c8: Home # Home
     7f3a2c10-5b91-4e82-a6d3-1c948f0e21a1: 'Boxies Year' # Boxies Year
     7f3a2c10-5b91-4e82-a6d3-1c948f0e21a2: 'Boxies Title' # Boxies Title
     7f3a2c10-5b91-4e82-a6d3-1c948f0e21a3: 'Boxies Intro' # Boxies Intro
@@ -119,6 +114,11 @@ meta:
     7f3a2c10-5b91-4e82-a6d3-1c948f0e21a7: 'Box Art' # Box Art
     7f3a2c10-5b91-4e82-a6d3-1c948f0e21a8: 'Boxies Awards' # Boxies Awards
     7f3a2c10-5b91-4e82-a6d3-1c948f0e21a9: 'Box Art Award' # Box Art Award
+    8a0a92e6-c591-41be-94f7-b9486c5cc954: 'Articles Block' # Articles Block
+    8a26d716-9934-4cab-8aca-91bda6ee6ab7: 'Embed URL' # Embed URL
+    9edae570-63e2-4382-9220-af482b3a8ea0: 'Outside The Lobby' # Outside The Lobby
+    16ccd7b0-a942-4f02-9d0b-d09a23b37f12: Header # Header
+    40a1c1d0-31e4-42f2-ad25-99bea864c2c8: Home # Home
     062f852a-a67b-4f65-aead-ab532527b58a: Hero # Hero
     63d18cba-28fe-42ee-a761-c302a4b0ea09: Footer # Footer
     91bb68e0-8acd-47f4-aa50-8bdf87280701: 'Raw HTML' # Raw HTML
@@ -271,7 +271,7 @@ plugins:
   mcp:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 1.4.0
   navigation:
     edition: standard
     enabled: true

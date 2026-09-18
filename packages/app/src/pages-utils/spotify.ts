@@ -8,6 +8,7 @@ interface SpotifyEpisodeItem {
 	html_description?: string;
 	duration_ms: number;
 	release_date: string;
+	images?: Array<{ url: string; height?: number; width?: number }>;
 	external_urls: {
 		spotify: string;
 	};
@@ -145,6 +146,7 @@ function mapSpotifyEpisode(
 		date: formatDate(item.release_date),
 		featured: index === 0,
 		spotifyUrl: item.external_urls.spotify,
+		imageUrl: item.images?.[0]?.url,
 	};
 }
 

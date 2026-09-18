@@ -7,4 +7,5 @@ export interface Episode {
   date: string;
   featured: boolean;
   spotifyUrl: string;
+  imageUrl?: string;
 }

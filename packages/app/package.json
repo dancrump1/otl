@@ -27,6 +27,7 @@
 		"graphql-request": "^3.4.0",
 		"html-react-parser": "^5.1.10",
 		"lucide-react": "^0.562.0",
+		"matter-js": "^0.20.0",
 		"mini-svg-data-uri": "^1.4.4",
 		"next": "^14.2.9",
 		"next-themes": "^0.3.0",
@@ -46,6 +47,7 @@
 	"devDependencies": {
 		"@ianvs/prettier-plugin-sort-imports": "^4.3.1",
 		"@svgr/webpack": "^8.1.0",
+		"@types/matter-js": "^0.20.2",
 		"@types/node": "^20.14.7",
 		"@types/react": "^18.2.66",
 		"@types/react-dom": "^18.2.22",

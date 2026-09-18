@@ -86,7 +86,7 @@ export function BoxiesPodium({ boxies, episodes = [] }: BoxiesPodiumProps) {
   const listenUrl = boxiesEpisode?.spotifyUrl ?? SPOTIFY_SHOW_URL;
 
   return (
-    <section id="boxies" className="py-24 px-6 border-y border-border/50">
+    <section id="boxies" className="border-y border-border/50 px-6 py-32 md:py-40">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-primary font-medium tracking-wide uppercase text-sm mb-2 flex items-center justify-center gap-2">
